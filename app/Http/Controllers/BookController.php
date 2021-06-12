@@ -111,18 +111,18 @@ class BookController extends Controller
     {
         $books = Book::findOrFail($id);
         $books->delete();
-        return $this->successResponse($books);
+       // return $this->successResponse($books);
         // old code
-        /*
-        $user = User::where('userid', $id)->first();
-        if($user){
-        $user->delete();
-        return $this->successResponse($user);
+        
+        $books = Book::where('bookid', $id)->first();
+        if($books){
+        $books->delete();
+        return $this->successResponse($books);
         }
         {
         return $this->errorResponse('User ID Does Not Exists',
         Response::HTTP_NOT_FOUND);
         }
-        */
+        
     }
 }

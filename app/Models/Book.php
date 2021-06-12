@@ -5,7 +5,7 @@
 
     class Book extends Model{
         public $timestamps = false;
-        protected $primaryKey = 'id';
+        protected $primaryKey = 'bookid';
         protected $table = 'tblbooks';
         // column sa table
         protected $fillable = [
